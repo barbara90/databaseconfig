@@ -13,7 +13,7 @@
     </entity>
     <entity name="Feeding" representedClassName="Feeding" syncable="YES" codeGenerationType="class">
         <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="fomula" optional="YES"/>
+        <attribute name="fomula" optional="YES" attributeType="String"/>
         <attribute name="milk" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="other" optional="YES" attributeType="String"/>
         <attribute name="until" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -27,7 +27,7 @@
     </entity>
     <entity name="Sleep" representedClassName="Sleep" syncable="YES" codeGenerationType="class">
         <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="until" optional="YES"/>
+        <attribute name="until" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="Vaccinations" representedClassName="Vaccinations" syncable="YES" codeGenerationType="class">
         <attribute name="bcg" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
