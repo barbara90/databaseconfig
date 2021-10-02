@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BodyPercentage" representedClassName="BodyPercentage" syncable="YES" codeGenerationType="class">
+        <attribute name="length" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="DailyPlan" representedClassName="DailyPlan" syncable="YES" codeGenerationType="class">
+        <relationship name="bodyPerc" optional="YES" transient="YES" maxCount="1" deletionRule="Deny" destinationEntity="BodyPercentage"/>
+        <relationship name="feeding" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="Feeding"/>
+        <relationship name="nappy" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="Nappy"/>
+        <relationship name="sleep" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="Sleep"/>
+        <relationship name="vaccinations" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="Vaccinations"/>
+    </entity>
+    <entity name="Feeding" representedClassName="Feeding" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="fomula" optional="YES"/>
+        <attribute name="milk" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="other" optional="YES" attributeType="String"/>
+        <attribute name="until" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="when" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="Nappy" representedClassName="Nappy" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="both" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="pee" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="poop" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Sleep" representedClassName="Sleep" syncable="YES" codeGenerationType="class">
+        <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="until" optional="YES"/>
+    </entity>
+    <entity name="Vaccinations" representedClassName="Vaccinations" syncable="YES" codeGenerationType="class">
+        <attribute name="bcg" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="diphteria" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="hepatitisA" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="hepatitisB" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="hInfluenzaB" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="hPV" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="influenza" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="ipv" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="measles" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="meningococcusB" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="meningococcusC" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="mumpss" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="pcv" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="pertussis" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="ppv" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="rota" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="rubella" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="tetanus" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="tetanusToxoid" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="tickBornEncephalitis" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="typhoidFever" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="varicella" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="yellowFever" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Nappy" positionX="-63" positionY="9" width="128" height="89"/>
+        <element name="Feeding" positionX="-54" positionY="18" width="128" height="119"/>
+        <element name="Sleep" positionX="-36" positionY="27" width="128" height="59"/>
+        <element name="Vaccinations" positionX="-18" positionY="36" width="128" height="374"/>
+        <element name="BodyPercentage" positionX="0" positionY="45" width="128" height="59"/>
+        <element name="DailyPlan" positionX="18" positionY="63" width="128" height="104"/>
+    </elements>
+</model>
